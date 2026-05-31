@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@300;400&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+.headline { font-family: 'Playfair Display', serif; }
+.mono { font-family: 'IBM Plex Mono', monospace; }
+
+.drop-zone {
+  border: 1.5px dashed #3a3530;
+  border-radius: 4px;
+  padding: 48px 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: #111;
+}
+.drop-zone:hover, .drop-zone.active {
+  border-color: #c9a96e;
+  background: #131008;
+}
+
+.btn {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 12px 28px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.btn-primary { background: #c9a96e; color: #0a0a0a; }
+.btn-primary:hover { background: #e0bf82; }
+.btn-primary:disabled { background: #3a3530; color: #666; cursor: not-allowed; }
+.btn-ghost { background: transparent; color: #888; border: 1px solid #2a2520; }
+.btn-ghost:hover { border-color: #c9a96e; color: #c9a96e; }
+
+.pill {
+  display: inline-block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: #1a1610;
+  border: 1px solid #3a3530;
+  color: #888;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.pill:hover, .pill.selected {
+  background: #1e1608;
+  border-color: #c9a96e;
+  color: #c9a96e;
+}
+
+.card {
+  background: #111;
+  border: 1px solid #1e1c18;
+  border-radius: 4px;
+  padding: 20px;
+  transition: border-color 0.2s;
+}
+.card:hover { border-color: #2e2c28; }
+
+.tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #c9a96e;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.spinner {
+  width: 20px; height: 20px;
+  border: 2px solid #2a2520;
+  border-top-color: #c9a96e;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.result-link {
+  color: #c9a96e;
+  text-decoration: none;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+}
+.result-link:hover { text-decoration: underline; }
+
+.divider { border: none; border-top: 1px solid #1e1c18; margin: 24px 0; }
+
+.confidence-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  display: inline-block; margin-right: 6px; vertical-align: middle;
+}
